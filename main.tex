@@ -1,0 +1,224 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+% Two-page research CV (HRI / conversational AI).
+% Search for "TODO" to find placeholders that need your real details.
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% {Organization}{Location}{Role / Degree}{Dates}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% Red placeholder for author lists still to be filled in
+\newcommand{\authorsTODO}{\textcolor{red}{[Authors]}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ricardo Santana} \\ \vspace{5pt}
+    \small Stockholm, SE $|$
+    \href{mailto:ricardocsantana99@gmail.com}{\underline{ricardocsantana99@gmail.com}} $|$
+    \href{https://linkedin.com/in/ricardocsantana}{\underline{linkedin.com/in/ricardocsantana}} $|$
+    \href{https://scholar.google.com/citations?user=IqX633oAAAAJ&hl=en}{\underline{Google Scholar}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Ph.D. researcher at KTH working on \textbf{conversational and multimodal AI for human--robot collaboration}. I build robots that decide \emph{where} to look, \emph{when} to speak and \emph{whether} to act, by grounding full-duplex spoken language models in a shared task and steering them with predicted partner state, from self-reported enjoyment to brain activity. Background in machine learning and deep reinforcement learning (TU Delft) and GenAI strategy (McKinsey Digital). \textbf{ICMI 2025 Best Paper Award}.}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+   \resumeSubheading
+      {KTH Royal Institute of Technology}{Stockholm, SE}
+      {Ph.D., Computer Science}{Jan. 2025 -- Expected 2028}
+      \resumeItemListStart
+        \resumeItem{\textbf{Multimodal, embodied \& affective AI} for \textbf{human--agent collaboration}, within WASP's Media and Language Research Arena and KTH's TMH Lab.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Delft University of Technology (TU Delft)}{Delft, NL}
+      {MSc, Aerospace Engineering (Machine Learning), GPA: 8.5/10}{Aug. 2020 -- Apr. 2023}
+      \resumeItemListStart
+        \resumeItem{Thesis in \textbf{Deep Reinforcement Learning for autonomous air mobility} (graded 9.0/10, top 5\%).}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Instituto Superior Técnico (IST)}{Lisbon, PT}
+      {BSc, Aerospace Engineering, GPA: 16/20}{Sep. 2017 -- Jul. 2020}
+      \resumeItemListStart
+        \resumeItem{Admitted with a perfect 20/20 GPA to Portugal's most competitive higher education program.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH-----------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {KTH Royal Institute of Technology, TMH Lab}{Stockholm, SE}
+      {Ph.D. Researcher}{Jan. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{\textbf{PandemicAI platform:} co-developed an open-source (MIT) platform in which a participant and an autonomous \textbf{Furhat robot} play the cooperative board game \emph{Pandemic} on a shared touchscreen, with an inspectable planner and two \textbf{LLM-based dialog managers} (structured and generative) that coordinate speech, gaze and game actions.}
+        \resumeItem{\textbf{PANACEA dataset:} collected \textbf{70 interactions with 36 participants} under two robot-voice conditions, with diarized word-level transcripts annotated for interaction failures, isolated audio tracks, facial action units, gaze targets and body landmarks, aligned with full game states and questionnaires.}
+        \resumeItem{\textbf{Enjoyment prediction:} built \textbf{Speech-to-Joy}, which predicts conversational enjoyment in real time from self-supervised speech and text embeddings, outperforming an experienced HRI annotator and LLM baselines (\textbf{ICMI 2025 Best Paper}).}
+        \resumeItem{\textbf{Brain encoding:} adapted a \textbf{multimodal whole-brain fMRI foundation model} to predict brain activity from live conversation, improving held-out prediction by \textbf{15\%} over a ridge encoder; showed that transfer between human and robot partners across two fMRI corpora (70 participants) is asymmetric where the robot's visual dynamics differ most from a human's.}
+        \resumeItem{\textbf{Game-playing agent:} trained a policy--value network in \textbf{JAX} by imitation and \textbf{Gumbel AlphaZero} self-play, winning \textbf{71\%} of games at rulebook difficulty versus 24\% for the rule-based solver.}
+        \resumeItem{\textbf{Full-duplex turn-taking:} steering an open full-duplex spoken language model; a small recurrent head over its hidden states predicts the partner's next turn onset with \textbf{AUC 0.87} (vs.\ 0.51 for the model itself), \textbf{doubling onset recall} at the same false-start rate.}
+      \resumeItemListEnd
+
+  \resumeSubheading
+      {Sensei}{Lisbon, PT}
+      {Computer Vision \& Machine Learning Research Intern}{Sep. 2021 -- Jan. 2022}
+      \resumeItemListStart
+        \resumeItem{Designed a \textbf{real-time 3D multi-camera tracking algorithm} using depth cameras for customer-journey analytics, \textbf{reducing hardware requirements by 50\%}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Publications}
+\resumeSubHeadingListStart
+  \resumeItem{Santana et al. \textbf{``Speech-to-Joy: Self-Supervised Features for Enjoyment Prediction in Human--Robot Conversation.''} \textit{ICMI 2025} --- \textbf{Best Paper Award}.}
+  \resumeItem{Santana et al. \textbf{``From Passive Observation to Natural Conversation with a Multimodal fMRI Foundation Model.''} \textit{AAAI 2027} (under review, Phase 2).}
+  % TODO: replace \authorsTODO with the real author lists, and check the
+  % submission track and status of each HRI 2027 paper.
+  \resumeItem{\authorsTODO. \textbf{``Can Human--Human and Human--Robot Conversation Share a Brain Encoding Model?''} \textit{HRI 2027}, full paper (under review).}
+  \resumeItem{\authorsTODO. \textbf{``PandemicAI: An Open Platform for Studying Human--Robot Collaboration in a Cooperative Game.''} \textit{HRI 2027} (under review).}
+  \resumeItem{\authorsTODO. \textbf{``PANACEA Dataset: Posture, Audio, and Non-verbal Actions in Collaboration with Embodied Agent.''} \textit{HRI 2027}, short contribution (under review).}
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+      {\textbf{TutorLM: Your AI Learning Companion} $|$ \emph{Google Gemma 3n Hackathon, Kaggle}}{2025}
+      \resumeItemListStart
+        % TODO: replace with the actual description, your role and any result
+        % (placement, prize). Link below is to the public write-up.
+        \resumeItem{AI tutoring companion built on Google's on-device multimodal \textbf{Gemma 3n} model; \href{https://www.kaggle.com/competitions/google-gemma-3n-hackathon/writeups/tutorlm-your-ai-learning-companion}{\underline{write-up on Kaggle}}.}
+      \resumeItemListEnd
+  \resumeProjectHeading
+      {\textbf{Rip Current Localization}}{2021}
+      \resumeItemListStart
+        \resumeItem{CNN-based segmentation to detect rip currents and at-risk swimmers in real time; \href{https://www.surfertoday.com/environment/the-artificial-intelligence-technology-that-detects-rip-currents}{\underline{featured in SurferToday}}.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------INDUSTRY-----------
+\section{Industry Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {McKinsey \& Company}{Lisbon, PT / Madrid, ES}
+      {Business Analyst, McKinsey Digital}{May 2023 -- Jan. 2025}
+      \resumeItemListStart
+        \resumeItem{Led the creation of a \textbf{GenAI strategic hub} for a major European bank, prioritizing and scaling AI use cases across business units.}
+        \resumeItem{Defined the \textbf{product vision and roadmap} for an insurtech app, leading a cross-functional team of 15+ engineers, designers and analysts.}
+        \resumeItem{Designed an \textbf{analytics-driven international expansion strategy} for a last-mile logistics startup.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TEACHING & SERVICE-----------
+\section{Teaching, Supervision \& Leadership}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+      {\textbf{Teaching Assistant}, Machine Learning; Language Engineering $|$ \emph{KTH}}{2025 -- Present}
+  \resumeProjectHeading
+      {\textbf{MSc thesis supervision}, J.~Quan: enjoyment detection in VR board-game play $|$ \emph{KTH}}{2026}
+  \resumeProjectHeading
+      {\textbf{Coordinator}, Aerospace Week Career Fair (15-member team, 30+ companies, 1000+ participants) $|$ \emph{IST}}{} % TODO: year
+  % TODO: add reviewing (e.g. HRI, ICMI, CHI) and outreach, if any
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{Honors \& Awards}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{Best Paper Award}, ACM ICMI}{2025}
+  \resumeProjectHeading{\textbf{MSc thesis graded 9.0/10} (top 5\%), TU Delft}{2023}
+  \resumeProjectHeading{\textbf{Admitted with 20/20 GPA}, Aerospace Engineering, IST}{2017}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+\resumeItemListStart
+  \resumeItem{\textbf{Research}: user studies in HRI, multimodal corpus collection (speech, video, gaze), fMRI encoding models, model steering}
+  \resumeItem{\textbf{AI/ML}: LLMs and full-duplex spoken language models, speech \& multimodal models, deep reinforcement learning, computer vision}
+  \resumeItem{\textbf{Programming}: Python, TypeScript, C\#, C, MATLAB}
+  \resumeItem{\textbf{Frameworks/Tools}: PyTorch, JAX, TensorFlow, scikit-learn, OpenCV, Furhat, Unity, Flutter, React}
+  % TODO: \resumeItem{\textbf{Languages}: Portuguese (native), English (fluent), ...}
+\resumeItemListEnd
+
+\end{document}
